@@ -7,6 +7,7 @@
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
   --filter-bg-color: #deebff;
+  --grey-tint-2: #d9d9d9;
 }
 body {
   padding: 0px 50px;
@@ -17,11 +18,18 @@ header {
   justify-content: space-between;
 }
 
+main {
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .nav-menu ul {
   display: flex;
   list-style: none;
   gap: 68px;
   margin: 0px;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 header img {
@@ -44,4 +52,76 @@ a {
 /* lorsqu'on survole le li on change la couleur de son enfant a en bleu */
 .nav-menu li:hover a {
   color: var(--main-color);
+}
+
+/* main section 1*/
+.recherche div {
+  background-color: var(--main-bg-color);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px 0 0 15px;
+}
+
+.recherche {
+  display: flex;
+}
+
+.recherche > * {
+  border: 1px solid var(--main-bg-color);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+.recherche input[value="Rechercher"] {
+  background: var(--main-color);
+  color: white;
+  border-radius: 0 15px 15px 0;
+  padding: 15px;
+}
+
+.filtres ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.filtres ul li a {
+  border: 2px solid var(--grey-tint-2);
+  padding: 4px 19px;
+  border-radius: 25px;
+  font-size: 17px;
+  font-weight: 700;
+}
+
+i:not(.recherche i) {
+  color: var(--main-color);
+  margin-right: 10px;
+}
+
+.filtres ul li:first-child {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.section-une {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.titre p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.titre h1 {
+  margin: 8px 0;
+  font-size: 22px;
+  font-weight: 700;
 }
